@@ -6,7 +6,7 @@ import PDFViewer from './components/PDFViewer'
 import DocumentStats from './components/DocumentStats'
 
 const SESSION_ID = uuidv4()
-const API = 'http://localhost:8000'
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export default function App() {
   const [docInfo, setDocInfo] = useState(null)
