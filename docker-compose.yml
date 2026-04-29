@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./evaluation_results:/app/evaluation_results
+    networks:
+      - rag-net
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - rag-net
+
+networks:
+  rag-net:
+    driver: bridge
