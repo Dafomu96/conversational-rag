@@ -1,6 +1,6 @@
 # DocRAG — Conversational RAG over Structured Documents
 
-A production-grade conversational AI system that answers questions about PDF documents using advanced retrieval techniques, table extraction, and hallucination detection.
+A conversational AI system (personal project) that answers questions about PDF documents using advanced retrieval techniques, table extraction, and hallucination detection.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1.1-green)
@@ -135,7 +135,7 @@ docker-compose up --build
 
 ## Evaluation
 
-RAGAS evaluation across 20 test questions covering plain text, table data, and multi-turn conversational chains.
+An evaluation script with RAGAS and 20 test questions covering plain text, table data and multi-turn conversations.
 
 ### Running the evaluation
 
@@ -148,17 +148,9 @@ Generates:
 - `evaluation_results/eval_TIMESTAMP.csv` — per-question scores
 - `evaluation_results/eval_TIMESTAMP.png` — score visualization
 
-### Metrics (on 2503.16870v2.pdf — Sparse Logit Sampling paper)
+### Results
 
-| Metric | Text Q&A | Table Q&A | Conversational |
-|---|---|---|---|
-| Faithfulness | — | — | — |
-| Answer Relevancy | — | — | — |
-| Context Precision | — | — | — |
-| Context Recall | — | — | — |
-| Grounding Score | — | — | — |
-
-> Metrics will be populated after running the evaluation script.
+Not published yet: the script is ready, but I have not run it on a reference document and reviewed the scores. Until then this project has no measured quality numbers.
 
 ## Design Decisions
 
